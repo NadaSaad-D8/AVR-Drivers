@@ -15,7 +15,7 @@
 
 #include "std_types.h"
 #include "micro_config.h"
-#include "common_macros.h"
+#include "BITS_CONFIGURATION.h"
 
 /*******************************************************************************
  *                      Preprocessor Macros                                    *

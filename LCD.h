@@ -9,7 +9,7 @@
 #define LCD_H_
 
 #include "std_types.h"
-#include "common_macros.h"
+#include "BITS_CONFIGURATION.h"
 #include "micro_config.h"
 
 /*******************************************************************************
