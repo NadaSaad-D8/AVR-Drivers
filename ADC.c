@@ -32,6 +32,19 @@ void ADCInit(const ADCConfigType* config_ptr)
    #ifdef INTERRUPT 
    ADCSRA |= (1<<ADIE);
    #endif
+   #ifdef POLLING
+   {
+       /* start conversion write '1' to ADSC */
+    SET_BIT(ADCSRA,ADSC);
+       /* wait for conversion to complete ADIF becomes '1' */ 
+	while(BIT_IS_CLEAR(ADCSRA,ADIF));
+    /* clear ADIF by write '1' to it :) */
+	SET_BIT(ADCSRA,ADIF); 
+	 /* store the data register of ADC in the g_variable  */
+     g_adcResult =ADC ;
+} 
+   }
+   #endif
 }
 /*****************************************************************************
  * 

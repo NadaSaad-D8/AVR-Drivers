@@ -24,6 +24,7 @@ ADCPrescaler       Prescaler       ;
 }ADCConfigType ;
 
 #define INTERRUPT 
+#define POLLING
  /*******************************************************************************
  *                      Functions Prototypes                                   *
  *******************************************************************************/
