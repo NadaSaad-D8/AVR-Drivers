@@ -12,6 +12,7 @@
  /****************************************************************************
                     Types Declerations 
  *****************************************************************************/
+
 typedef enum {AREF,AVCC_CAP,RESERVED,INTERNAL_REFRENCEVOLT }ADCRefVolt;
 typedef enum {ADC0,ADC1,ADC2,ADC3,ADC4,ADC5,ADC6,ADC7}ADCChannel;
 typedef enum {RIGHT,LEFT}ADCResultAdjust;

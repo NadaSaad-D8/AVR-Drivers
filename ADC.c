@@ -4,11 +4,10 @@
  *                          Global Variables                                   *
  *******************************************************************************/
 
-volatile uint16 g_adcResult = 0;
+volatile extern uint16 g_adcResult = 0;
 /*******************************************************************************
  *                          ISR's Definitions                                  *
  *******************************************************************************/
-
 ISR(ADC_vect)
 {
 	/* Read ADC Data after conversion complete */
@@ -21,11 +20,11 @@ ISR(ADC_vect)
 
 void ADCInit(const ADCConfigType* config_ptr)
 {
-  /*choose voltage */
-  ADMUX = ((ADMUX & 0xCF) | ((config_ptr -> RefrenceVoltage) <<6) );
-  /*choose the ADCResult Left or Right Adjusted */
-  ADMUX =((config_ptr -> ResultAdjust ) << 5) ;
-  /*Enable ADC */
+   /*choose voltage */
+   ADMUX = ((ADMUX & 0xCF) | ((config_ptr -> RefrenceVoltage) <<6) );
+   /*choose the ADCResult Left or Right Adjusted */
+   ADMUX =((config_ptr -> ResultAdjust ) << 5) ;
+   /*Enable ADC */
    ADCSRA |= (1<<7);
   /*choose Clock Note : ADC must operate in range 50-200Khz */
    ADCSRA = (( ADCSRA & 0xF8) |  (config_ptr -> Prescaler )  ) ;
@@ -33,9 +32,9 @@ void ADCInit(const ADCConfigType* config_ptr)
    ADCSRA |= (1<<ADIE);
    #endif
   
-   }
-  
 }
+  
+
 /*****************************************************************************
  * 
  * Description : Read the channel of the ADC and Start Conversion 
