@@ -16,9 +16,9 @@
  *                      Preprocessor Macros                                    *
  *******************************************************************************/
 /* LCD Hardwar pins and ports  */
-#define RS PD4
-#define RW PD5
-#define E  PD6
+#define RS PD0
+#define RW PD1
+#define E  PD2
 #define LCD_CTRL_PORT PORTD
 #define LCD_CTRL_PORT_DIR DDRD
 

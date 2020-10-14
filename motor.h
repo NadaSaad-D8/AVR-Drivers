@@ -11,7 +11,7 @@
 /*******************************************************************************
  *                      Preprocessor Macros                                    *
  *******************************************************************************/
-#define En     PB3
+#define En     PB3 //change
 #define DIR_1  PB0
 #define DIR_2  PB1
 #define MOTOR_PORT PORTB
