@@ -1,5 +1,5 @@
 /*****************************************************************************
- * Module :  LCD 
+ * Module :  ADC
  * File Name : ADC.h
  * Description : header file for ADC driver 
  * Author : Nada Mohamed 
